@@ -1,0 +1,27 @@
+@AutoWired: funciona como um atalho, o dev n precisa
+instanciar objetos pra ter acesso a x metodos (injecao de dependencia)
+
+**verificar se ao inves de o proprio back end criar a tabela pessoas, n tem como utilizar a partir da script msm -> testei mas n deu certo sem as @
+**tratamento de excecoes e inputs, e tbm dos results do postman http
+**criar testes
+
+
+**service é onde fica as regras de negocio do projeto,
+geralmente qnd tem uma rota, n utiliza diretamente uma acao do 
+bd, crud, pq talvez antes de fazer tal servico precisa validar,
+verificar no bd etc, ou seja as condicionais
+
+a regra de negocio nunca fica dentro de uma rota, n é uma boa
+prática, por isso cria um service e dai o controller só chama os metodos do service
+
+** @component -> serve pra criar resposta qnd houver algum erro
+nas requests
+
+basicamente qnd cria uma classe e atribuui @component nela,
+significa q quando sua app spring tiver sendo executada,
+ele varre/pesquisa/procura todos os elementos da classe de mensagem
+e depois q fizer isso, em outras classes euu posso usar o AutoWired
+pra poder instanciar um obj da classe msg,
+
+a melhor pratica é importar o repo pra classe service, remover do
+controller.
